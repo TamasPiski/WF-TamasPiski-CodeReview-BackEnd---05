@@ -55,7 +55,8 @@ WHERE py.payment_status = 0;
 # Let's say our staff wants to know which cars need to be filled with petrol
 SELECT car_model AS "Car", gas_tank_full AS "Filled up" 
 FROM cars AS c
-JOIN maintenances AS m ON c.maintenance_id = m.idmaintenance;
+JOIN maintenances AS m ON c.maintenance_id = m.idmaintenance
+WHERE gas_tank_full = 0;
 
 # We can list the reservations for the future as well
 SELECT start_date, end_date, car_brand, extra

@@ -53,7 +53,7 @@ CREATE TABLE `cars` (
 
 LOCK TABLES `cars` WRITE;
 /*!40000 ALTER TABLE `cars` DISABLE KEYS */;
-INSERT INTO `cars` VALUES (1,'BMW','5 series','W1665E',1,1,1,1,0),(2,'Ford','Mustang','W1566I',2,2,3,2,0),(3,'Volkswagen','Golf','W5146T',3,3,2,3,0);
+INSERT INTO `cars` VALUES (1,'BMW','5 series','W1665E',1,1,1,1,0),(2,'Ford','Mustang','W1566I',2,2,3,2,0),(3,'Volkswagen','Golf','W5146T',3,3,2,3,0),(4,'Aston Martin','DB9','W1616U',4,1,3,4,0),(5,'Mercedes','S','W1618X',5,1,1,5,0),(6,'Mazda','MX-5','W486468Y',6,3,3,6,0);
 /*!40000 ALTER TABLE `cars` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,7 +83,7 @@ CREATE TABLE `clients` (
 
 LOCK TABLES `clients` WRITE;
 /*!40000 ALTER TABLE `clients` DISABLE KEYS */;
-INSERT INTO `clients` VALUES (1,'Simon','+3654844','Kettenbruckengasse 26',NULL),(2,'Tamas','+4354888','Alszeile 118',NULL),(3,'Joe','+416846848','Stephansplatz 1',NULL);
+INSERT INTO `clients` VALUES (1,'Simon','+3654844','Kettenbruckengasse 26',NULL),(2,'Tamas','+4354888','Alszeile 118',NULL),(3,'Joe','+416846848','Stephansplatz 1',NULL),(4,'Eva','+4846864','Keplerplatz 17',NULL),(5,'John','+4854446','Rotzergasse 46',NULL),(6,'Kevin','+4484864','Reumanplatz',NULL);
 /*!40000 ALTER TABLE `clients` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -108,7 +108,7 @@ CREATE TABLE `extras` (
 
 LOCK TABLES `extras` WRITE;
 /*!40000 ALTER TABLE `extras` DISABLE KEYS */;
-INSERT INTO `extras` VALUES (1,'Child seat'),(2,'Topbox'),(3,'Tinted windows');
+INSERT INTO `extras` VALUES (1,'Child seat'),(2,'Topbox'),(3,'Tinted windows'),(4,'Electric seats'),(5,'Folding mirrors');
 /*!40000 ALTER TABLE `extras` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -136,7 +136,7 @@ CREATE TABLE `insurances` (
 
 LOCK TABLES `insurances` WRITE;
 /*!40000 ALTER TABLE `insurances` DISABLE KEYS */;
-INSERT INTO `insurances` VALUES (1,'Full','2020-01-01','2020-12-31',1),(2,'Full','2019-06-01','2020-05-31',0),(3,'Third-party','2020-01-06','2021-01-05',1);
+INSERT INTO `insurances` VALUES (1,'Full','2020-01-01','2020-12-31',1),(2,'Full','2019-06-01','2020-05-31',0),(3,'Third-party','2020-01-06','2021-01-05',1),(4,'Third-party','2020-01-04','2021-01-03',1),(5,'Full','2019-11-16','2020-11-06',1),(6,'Full','2019-02-06','2020-02-05',0);
 /*!40000 ALTER TABLE `insurances` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -167,7 +167,7 @@ CREATE TABLE `invoices` (
 
 LOCK TABLES `invoices` WRITE;
 /*!40000 ALTER TABLE `invoices` DISABLE KEYS */;
-INSERT INTO `invoices` VALUES (1,1,'2020-01-01','2020-01-15',1551,1),(2,2,'2019-11-19','2019-12-31',800,2);
+INSERT INTO `invoices` VALUES (1,1,'2020-01-01','2020-01-15',1551,1),(2,2,'2019-11-19','2019-12-31',800,2),(3,2,'2019-11-01','2019-11-30',450,4),(4,4,'2019-07-16','2019-11-25',901,3),(5,6,'2019-12-02','2020-01-05',472,6),(6,5,'2020-01-06','2020-02-01',1597,5);
 /*!40000 ALTER TABLE `invoices` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -219,7 +219,7 @@ CREATE TABLE `maintenances` (
 
 LOCK TABLES `maintenances` WRITE;
 /*!40000 ALTER TABLE `maintenances` DISABLE KEYS */;
-INSERT INTO `maintenances` VALUES (1,1,'2019-11-19'),(2,1,'2019-12-11'),(3,0,'2019-06-11');
+INSERT INTO `maintenances` VALUES (1,1,'2019-11-19'),(2,1,'2019-12-11'),(3,0,'2019-06-11'),(4,1,'2019-01-19'),(5,0,'2019-09-19'),(6,1,'2020-01-01');
 /*!40000 ALTER TABLE `maintenances` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -272,7 +272,7 @@ CREATE TABLE `payments` (
 
 LOCK TABLES `payments` WRITE;
 /*!40000 ALTER TABLE `payments` DISABLE KEYS */;
-INSERT INTO `payments` VALUES (1,0,2),(2,1,1);
+INSERT INTO `payments` VALUES (1,0,2),(2,1,1),(3,0,3),(4,1,1),(5,1,2),(6,0,1);
 /*!40000 ALTER TABLE `payments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -339,7 +339,7 @@ CREATE TABLE `rents` (
 
 LOCK TABLES `rents` WRITE;
 /*!40000 ALTER TABLE `rents` DISABLE KEYS */;
-INSERT INTO `rents` VALUES (1,'2019-11-01','2019-11-10',2,1,2,1,2),(2,'2019-12-10','2019-12-21',1,2,1,3,3);
+INSERT INTO `rents` VALUES (1,'2019-11-01','2019-11-10',2,1,2,1,2),(2,'2019-12-10','2019-12-21',1,2,1,3,3),(3,'2019-10-15','2019-10-20',4,5,3,5,1),(4,'2020-01-06','2020-01-06',5,4,5,1,2),(5,'2019-11-15','2019-12-31',3,3,6,NULL,3),(6,'2019-03-01','2019-03-28',6,6,4,4,3);
 /*!40000 ALTER TABLE `rents` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -372,7 +372,7 @@ CREATE TABLE `reservations` (
 
 LOCK TABLES `reservations` WRITE;
 /*!40000 ALTER TABLE `reservations` DISABLE KEYS */;
-INSERT INTO `reservations` VALUES (1,'2020-01-18','2020-01-25',3,1),(2,'2020-03-01','2020-03-08',2,3);
+INSERT INTO `reservations` VALUES (1,'2020-01-18','2020-01-25',3,1),(2,'2020-03-01','2020-03-08',2,3),(3,'2020-05-15','2020-06-12',1,5),(4,'2020-04-01','2020-04-01',4,3),(5,'2020-02-28','2020-03-12',6,2);
 /*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -385,4 +385,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-05 14:39:24
+-- Dump completed on 2020-01-05 18:33:26
